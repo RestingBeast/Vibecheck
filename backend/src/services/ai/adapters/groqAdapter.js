@@ -12,6 +12,11 @@ export async function generateNarrative(prompt) {
     ],
     model: "qwen/qwen3-32b",
     max_completion_tokens: 1000,
+    "stream": false,
+    "reasoning_effort": "default",
+    "response_format": {
+      "type": "json_object"
+    },
   });
   const content = res.choices?.[0]?.message?.content;
   if (!content) throw new Error("AI returned empty response");
