@@ -11,7 +11,7 @@ export async function generateNarrative(prompt) {
       },
     ],
     model: "qwen/qwen3-32b",
-    max_completion_tokens: 4096,
+    max_completion_tokens: 1200,
     "stream": false,
     "reasoning_effort": "default",
     "response_format": {
