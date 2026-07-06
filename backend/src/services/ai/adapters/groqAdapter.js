@@ -10,8 +10,8 @@ export async function generateNarrative(prompt) {
         content: prompt,
       },
     ],
-    model: "llama-3.3-70b-versatile",
-    max_completion_tokens: 500,
+    model: "qwen/qwen3-32b",
+    max_completion_tokens: 1000,
   });
   const content = res.choices?.[0]?.message?.content;
   if (!content) throw new Error("AI returned empty response");
